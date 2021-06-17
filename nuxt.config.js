@@ -18,7 +18,7 @@ export default {
       process.env.NODE_ENV === 'production'
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
         : 'http://localhost:3000',
-    lang: SITE_INFO.sitelang || 'en-US'
+    lang: SITE_INFO.sitelang || 'fr-FR'
   },
   /*
    ** Headers of the page
@@ -75,10 +75,16 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa', '@nuxtjs/fontawesome', '@nuxtjs/style-resources'],
   /*
    ** Nuxt.js modules
    */
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true
+    }
+  },
   modules: ['@nuxt/content', 'nuxt-purgecss'],
   /*
    ** Build configuration
@@ -102,7 +108,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) { }
   },
   /*
    ** Custom additions configuration
@@ -118,7 +124,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
+    whitelist: ['btn', 'icon', 'main'],
     whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
     whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/]
   },

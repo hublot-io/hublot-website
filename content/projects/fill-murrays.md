@@ -1,9 +1,9 @@
 ---
 category: animals
-title: Fill Murrays
-description: Yet another placeholding project, but with Bills
+title: Test Article
+description: Test article Hublot - Microlearning N°1
 cover: https://www.fillmurray.com/g/400/200
-gallery: ['https://www.fillmurray.com/g/800/400', 'https://www.fillmurray.com/600/600']
+gallery: ['https://www.fillmurray.com/g/800/400']
 ---
 
 It is easy to write **markdown**-*enabled* content like this placeholder text, with support for images.

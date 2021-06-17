@@ -8,7 +8,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
-    darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -37,6 +36,11 @@ module.exports = {
           '800': 'var(--color-primary-800)', // #1C263B
           '900': 'var(--color-primary-900)', // #0D131E
         },
+        hublot: {
+          '100': 'var(--color-hublot-primary)',
+          'bg': 'var(--bg-color)',
+          default: 'var(--color-hublot-primary)',
+        }
       },
       screens: {
         'xs': '480px', // Added xs
@@ -48,11 +52,8 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active']
+    animation: ['motion-reduce', 'motion-safe'],
   },
-  plugins: [require('tailwindcss-dark-mode')()],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === 'production',
